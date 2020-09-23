@@ -1,7 +1,7 @@
 //const CustomError = require("../extensions/custom-error");
 
 module.exports = function transform(arr) {
- // throw new CustomError('Not implemented');
+  //throw new CustomError('Not implemented');
   // remove line with error and write your code here
  if (!Array.isArray(arr)) {
   throw new Error();
@@ -15,9 +15,7 @@ module.exports = function transform(arr) {
    return [];
  }
  for (let i = 0; i < arr.length; i++) {
-  if (Number.isInteger(arr[i])) {
-    res.push(arr[i]);
-  }
+  
   if (arr[i] == disn && arr[i+1] !== undefined) {
     arr.splice(i + 1, 1);
   }
