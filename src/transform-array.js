@@ -1,8 +1,4 @@
-//const CustomError = require("../extensions/custom-error");
-
 module.exports = function transform(arr) {
-  // throw new CustomError('Not implemented');
-  // remove line with error and write your code here
   let discarded = false;
   if (!Array.isArray(arr)) {
     throw new Error();
@@ -16,7 +12,7 @@ module.exports = function transform(arr) {
     return [];
   }
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == disn && arr[i + 1] !== undefined && discarded == false) {
+    if (arr[i] == disn && arr[i + 1] !== undefined) {
       i++;
       discarded = true;
     } else if (arr[i] == doubn && arr[i + 1] !== undefined) {
