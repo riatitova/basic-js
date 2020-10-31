@@ -1,4 +1,3 @@
-//const CustomError = require("../extensions/custom-error");
 function isLetter(str) {
   return str.length === 1 && str.match(/[a-z]/i);
 }
@@ -28,8 +27,6 @@ class VigenereCipheringMachine {
   }
 
   encrypt(message, key) {
-    //throw new CustomError('Not implemented');
-    // remove line with error and write your code here
     if (message === undefined || key === undefined) {
       throw new Error("wrong value");
     }
@@ -67,8 +64,6 @@ class VigenereCipheringMachine {
   }
 
   decrypt(message, key) {
-    // throw new CustomError('Not implemented');
-    // remove line with error and write your code here
     message = message.toLowerCase();
     key = key.toLowerCase();
     let newkey = [];
